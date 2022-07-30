@@ -80,6 +80,7 @@ function setBGColors() {
         $(this).addClass('past');
     } else {
         console.log("Time Calculation Error");
+        console.log("future");
     }
     })
 };
