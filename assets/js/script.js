@@ -6,7 +6,7 @@ var currentTime;
 // Local Storage Variables
 var eventTimeEL;
 var eventText;
-var timeBlockArray = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
+var timeBlockArray = [9, 10, 11, 12, 13, 14, 15, 16, 17,];
 
 // Button to save events
 var saveBtn = $(".saveBtn");
@@ -32,13 +32,25 @@ function currentMomentDate() {
 // Renders Events Pulled from Local Storage to DOM
 function renderEvents() {
   for (var i = 0; i < timeBlockArray.length; i++) {
+    template = 
+    `<div class="row time-block">
+    <label for="calTime9" class="hour col-md-1">${timeData}</label>
+    <textarea class="col-md-10" id="timeblock-9" type="text" name="timeblock-9"></textarea>
+    <button class="btn saveBtn col-12 col-md-1" id="btn-9"><i class="fas fa-save"></i></button>
+  </div>`
+    
+    
+    
+    
+    
+    
     $("[id^=timeblock-]").each(function (i, v) {
       $(v).val(localStorage.getItem(timeBlockArray[i]));
     });
   }
 }
 
-// Triggers Click Handler for Save Buttons
+//  Click button Handler for Saving to local storage
 saveBtn.on("click", saveButtonClickHandler);
 
 // When Save Button Clicked, Pulls Corresponding Time and Date Values

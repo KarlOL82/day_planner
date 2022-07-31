@@ -1,8 +1,5 @@
-
-
-
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -22,7 +19,7 @@ textarea {
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
-  background-color: #8DDBE0;
+  background-color: #8ddbe0;
 }
 
 .jumbotron #currentDate {
@@ -36,7 +33,7 @@ textarea {
 .time-block {
   text-align: center;
   border-radius: 15px;
-  margin: 10px
+  margin: 10px;
 }
 
 .row {
@@ -46,7 +43,7 @@ textarea {
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: #8ddbe0;
   color: #000000;
   border-top: 1px dashed #000000;
   padding-top: 15px;
@@ -86,7 +83,7 @@ textarea {
 
 @media only screen and (max-width: 767px) {
   .jumbotron {
-  border-bottom: 2px solid var(--c-black);
+    border-bottom: 2px solid var(--c-black);
   }
   .jumbotron h1 {
     font-size: 3em;
@@ -99,7 +96,7 @@ textarea {
   }
   .row {
     margin-bottom: 5em;
-  }  
+  }
   .hour {
     font-weight: bold;
   }
@@ -116,11 +113,11 @@ textarea {
   }
 }
 
-@media only screen and (max-width:502px) {
-    .jumbotron h1 {
-      font-size: 2.5em;
-    }
-    .jumbotron #currentDate {
-      font-size: 1.5em;
-    }
+@media only screen and (max-width: 502px) {
+  .jumbotron h1 {
+    font-size: 2.5em;
+  }
+  .jumbotron #currentDate {
+    font-size: 1.5em;
+  }
 }
