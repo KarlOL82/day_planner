@@ -14,7 +14,7 @@ var saveBtn = $(".saveBtn");
 // Determine Color
 var calTimeblock;
 var timerInterval;
-var timeblockID = $("textarea[id*='timeblock']");
+var timeblockID = document.querySelector(".time-block");
 
 // Calls Functions to Render Date and Events to the DOM & Update Colors
 function init() {
@@ -32,6 +32,7 @@ function currentMomentDate() {
 // Renders Events Pulled from Local Storage to DOM
 function renderEvents() {
   for (var i = 0; i < timeBlockArray.length; i++) {
+    var timeData = timeBlockArray[i];
     template = 
     `<div class="row time-block">
     <label for="calTime9" class="hour col-md-1">${timeData}</label>
