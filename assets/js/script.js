@@ -11,7 +11,7 @@ var timeBlockArray = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 // Button to save events
 var saveBtn = $(".saveBtn");
 
-// Determine Color
+// Adds color to blocks based on time
 var calTimeblock;
 var timerInterval;
 var timeblockID = $("textarea[id*='timeblock']");
@@ -34,6 +34,7 @@ function renderEvents() {
   for (var i = 0; i < timeBlockArray.length; i++) {
     template = $("[id^=timeblock-]").each(function (i, v) {
       $(v).val(localStorage.getItem(timeBlockArray[i]));
+      
     });
   }
 }
