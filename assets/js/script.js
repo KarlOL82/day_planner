@@ -14,17 +14,14 @@ var timeblockID = $("textarea[id*='timeblock']");
 // Button to save events
 var saveBtn = $(".saveBtn");
 
+//  Click button Handler for Saving to local storage
+saveBtn.on("click", saveButtonClickHandler);
+
 // Calls Functions to render date, time, and events and set the color
 function init() {
   displayTime();
   renderEvents();
   setBGColors();
-}
-
-// Sets current date in header
-function displayTime() {
-  currentDate = moment().format("dddd, LL");
-  currentDateEl.text(currentDate);
 }
 
 // Displays saved events from local storage
@@ -36,8 +33,12 @@ function renderEvents() {
   }
 }
 
-//  Click button Handler for Saving to local storage
-saveBtn.on("click", saveButtonClickHandler);
+// Sets current date in header
+function displayTime() {
+  currentDate = moment().format("dddd, LL");
+  currentDateEl.text(currentDate);
+}
+
 
 // When Save Button Clicked, Pulls Corresponding Time and Date Values
 function saveButtonClickHandler(event) {
@@ -74,28 +75,30 @@ function setBGColors() {
       $(this).removeClass("present future");
       $(this).addClass("past");
     } else {
-      console.log("Time Calculation Error");
+      console.log("Error");
       console.log("future");
     }
   });
 }
 
 // Updates display every minute
-function setIntervalOnMinute() {
+function setMinuteInterval() {
   var currentDateSeconds = new Date().getSeconds();
   if (currentDateSeconds == 0) {
     setInterval(displayTime, 60000);
     setInterval(setBGColors, 60000);
   } else {
     setTimeout(function () {
-      setIntervalOnMinute();
+      setMinuteInterval();
     }, (60 - currentDateSeconds) * 1000);
   }
+
   displayTime();
+
   setBGColors();
 }
 
-setIntervalOnMinute();
+setMinuteInterval();
 
 // Initializes Page
 init();
