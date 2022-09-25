@@ -76,7 +76,7 @@ function setBGColors() {
       $(this).addClass("past");
     } else {
       console.log("Error");
-      console.log("future");
+      
     }
   });
 }
