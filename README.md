@@ -2,7 +2,8 @@
 An interactive day scheduler that allows the user to schedule events during each 1 hour block of the workday.
 
 ## Developer Info  
-- Developed by Karl Linfeldt  
+- Developed by Karl Linfeldt 
+- [Live App](https://karlol82.github.io/day_planner) 
 - [Github Repo](https://github.com/KarlOL82/day_planner)  
 - [email](klinfeldt@gmail.com)  
 
