@@ -81,24 +81,5 @@ function setBGColors() {
   });
 }
 
-// Updates display every minute
-function setMinuteInterval() {
-  var currentDateSeconds = new Date().getSeconds();
-  if (currentDateSeconds == 0) {
-    setInterval(displayTime, 60000);
-    setInterval(setBGColors, 60000);
-  } else {
-    setTimeout(function () {
-      setMinuteInterval();
-    }, (60 - currentDateSeconds) * 1000);
-  }
-
-  displayTime();
-
-  setBGColors();
-}
-
-setMinuteInterval();
-
 // Initializes Page
 init();

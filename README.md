@@ -12,7 +12,7 @@ I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively  
 
 ## Overview  
-This application allows the user to schedule their work day by adding notes to each one hour block of time. The notes are saved in local storage and rendered in the browser. The time blocks are color coded based on whether each hour is in the past, present, or future and are updated once per minute. The application was built using Javascript, Jquery, html, and CSS and deployed with Github Pages.  
+This application allows the user to schedule their work day by adding notes to each one hour block of time. The notes are saved in local storage and rendered in the browser. The time blocks are color coded based on whether each hour is in the past, present, or future and are updated each time the page loads. The application was built using Javascript, Jquery, html, and CSS and deployed with Github Pages.  
 
 ## License  
 ![License](https://img.shields.io/badge/license-MIT-green.svg)  
